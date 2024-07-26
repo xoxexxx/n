@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import {DataSource} from 'typeorm';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+
+import { DataModule } from './data/data.module';
+import { AppController } from './app.controller';
+
 import {join} from 'path';
-import { DataModule } from './data/date.module';
 
 @Module({
   imports: [
